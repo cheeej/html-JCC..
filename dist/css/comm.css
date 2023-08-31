@@ -573,16 +573,23 @@ body .wrap {
 html,
 body {
   position: relative;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
 }
 
 .wrap {
   width: 100%;
+  height: 1000vh;
+  background-color: #000;
 }
 
 .inner {
   max-width: 1920px;
   margin: 0 auto;
+}
+
+.main {
+  width: 100%;
 }
 
 .banner::before {
@@ -627,9 +634,12 @@ body {
 }
 
 .nav-box {
+  width: 875px;
+  height: 810px;
   color: #ffffff;
   position: relative;
   text-align: center;
+  margin: 50px auto 0;
 }
 .nav-box .set-box {
   position: absolute;
@@ -649,13 +659,24 @@ body {
   font-weight: 400;
   color: #fff;
 }
+.nav-box .set-box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
 .nav-box .set-box .n-box1 {
   width: 366px;
+  height: 100%;
   background: #1e1513;
 }
 .nav-box .set-box .n-box2 {
   width: 366px;
+  height: 100%;
   background: #1e1513;
+}
+.nav-box .set-box .nb:hover {
+  background: #ff0000;
 }
 .nav-box .set-box2 {
   position: absolute;
@@ -666,7 +687,7 @@ body {
   height: 450px;
   display: flex;
   align-items: center;
-  gap: 110px;
+  gap: 115px;
   font-family: Noto Sans KR;
   font-size: 32px;
   font-style: normal;
@@ -674,42 +695,67 @@ body {
   line-height: 120%; /* 38.4px */
 }
 .nav-box .set-box2 .text-box {
+  margin-top: 40px;
   color: #fff;
   font-family: Raleway;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 24px */
+  line-height: 100%; /* 24px */
   letter-spacing: 6.5px;
   font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 373px;
+  height: 141px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: -10px;
 }
-.nav-box .set-box2 .text-box p {
+.nav-box .set-box2 .text-box a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.nav-box .set-box2 .text-box h3 {
   font-family: Raleway;
   font-size: 60px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 72px */
-  letter-spacing: 6.9px;
+  line-height: 90%; /* 72px */
+  letter-spacing: 5px;
 }
-.nav-box .n-box3 {
+.nav-box .set-box2 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.nav-box .set-box2 .n-box3 {
   width: 350px;
   height: 450px;
   line-height: 450px;
   text-align: center;
   background: #1e1513;
 }
+.nav-box .set-box2 .n-box3:hover {
+  background-color: #f00;
+}
 
 .play-box {
+  margin-top: 90px;
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%;
+  height: 900px;
 }
 .play-box .youtube-wrap {
+  width: 100%;
+  height: 100%;
   /* responsive youtube player */
 }
 .play-box .youtube-wrap .player {
   position: absolute;
-  top: 900px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -717,41 +763,78 @@ body {
 }
 
 .info {
+  margin-top: 120px;
+  width: 100%;
+  height: 200px;
   position: relative;
-  width: 641px;
-  height: 214px;
   display: inline-flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 50px;
 }
 .info .info-box {
-  position: absolute;
-  top: 1500px;
-  left: 0;
-  width: 641px;
-  height: 887px;
+  width: 100%;
+  height: 75px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 12px;
 }
-.info .info-box p {
+.info h3 {
+  font-family: Noto Sans KR;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 38.4px */
+  color: #f00;
+}
+.info p {
   font-family: Noto Sans KR;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  color: #fff;
 }
-.info .icon {
+.info .info-icon {
+  color: #fff;
+  width: 641px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 76px;
+  margin: 0 auto;
+  text-align: center;
 }
-.info .las la-university {
-  content: "\f19c";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
+.info .info-icon a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.info .info-icon i::after {
+  content: "";
+  width: 11px;
+  height: 100px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+}
+.info .info-icon i {
+  font-size: 64px;
+  display: flex;
+  flex-direction: column;
+}
+.info .info-icon i:hover {
+  color: #f00;
+}
+.info .info-icon span {
+  font-size: 18px;
+}
+
+.bnr {
+  margin-top: 120px;
+  width: 100%;
+  height: 900px;
+  background: url(../../images/main/img-rent-concert.png) 0 0/cover no-repeat;
+  opacity: 80%;
 }/*# sourceMappingURL=comm.css.map */

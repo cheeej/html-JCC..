@@ -27,18 +27,24 @@
 html,
 body {
   position: relative;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
 }
 .wrap {
   width: 100%;
+  height: 1000vh;
   // margin: 0 auto;
   // background: #000;
+  // background-color: rgba(0, 0, 0, 0.8);
+  background-color: #000;
 }
 .inner {
   max-width: 1920px;
   margin: 0 auto;
 }
-
+.main {
+  width: 100%;
+}
 .banner::before {
   content: "";
   display: block;
@@ -85,9 +91,12 @@ body {
 }
 
 .nav-box {
+  width: 875px;
+  height: 810px;
   color: #ffffff;
   position: relative;
   text-align: center;
+  margin: 50px auto 0;
   .set-box {
     position: absolute;
     top: -55px;
@@ -106,8 +115,15 @@ body {
     font-weight: 400;
     color: #fff;
 
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+    }
     .n-box1 {
       width: 366px;
+      height: 100%;
       background: #1e1513;
       // line-height: 120%; /* 38.4px */
       // margin-right: 30px;
@@ -115,7 +131,11 @@ body {
     .n-box2 {
       // line-height: 120%; /* 38.4px */
       width: 366px;
+      height: 100%;
       background: #1e1513;
+    }
+    .nb:hover {
+      background: #ff0000;
     }
   }
   .set-box2 {
@@ -128,7 +148,7 @@ body {
     display: flex;
     align-items: center;
     // justify-content: space-between;
-    gap: 110px;
+    gap: 115px;
     font-family: Noto Sans KR;
     font-size: 32px;
     font-style: normal;
@@ -136,38 +156,66 @@ body {
     line-height: 120%; /* 38.4px */
 
     .text-box {
+      margin-top: 40px;
       color: #fff;
       font-family: Raleway;
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
-      line-height: 120%; /* 24px */
+      line-height: 100%; /* 24px */
       letter-spacing: 6.5px;
       font-size: 30px;
-      p {
+      display: flex;
+      flex-direction: column;
+      width: 373px;
+      height: 141px;
+      justify-content: center;
+      align-items: flex-start;
+      gap: -10px;
+
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+      }
+      h3 {
         font-family: Raleway;
         font-size: 60px;
         font-style: normal;
         font-weight: 400;
-        line-height: 120%; /* 72px */
-        letter-spacing: 6.9px;
+        line-height: 90%; /* 72px */
+        letter-spacing: 5px;
       }
     }
-  }
-  .n-box3 {
-    width: 350px;
-    height: 450px;
-    line-height: 450px;
-    text-align: center;
-    background: #1e1513;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+    }
+    .n-box3 {
+      width: 350px;
+      height: 450px;
+      line-height: 450px;
+      text-align: center;
+      background: #1e1513;
+    }
+    .n-box3:hover {
+      background-color: #f00;
+    }
   }
 }
 .play-box {
+  margin-top: 90px;
   position: relative;
   width: 100%;
+  height: 900px;
   //   16:9 비율 = 100 : 56.25%
-  padding-bottom: 56.25%;
+  // padding-bottom: 56.25%;
   .youtube-wrap {
+    width: 100%;
+    height: 100%;
     // background:
     //   url(<path-to-image>),
     //   lightgray 50% / cover no-repeat;
@@ -175,7 +223,6 @@ body {
 
     .player {
       position: absolute;
-      top: 900px;
       left: 0;
       width: 100%;
       height: 100%;
@@ -184,42 +231,93 @@ body {
   }
 }
 .info {
+  margin-top: 120px;
+  width: 100%;
+  height: 200px;
   position: relative;
-  width: 641px;
-  height: 214px;
   display: inline-flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 50px;
 
   .info-box {
-    position: absolute;
-    top: 1500px;
-    left: 0;
-    width: 641px;
-    height: 887px;
+    // position: absolute;
+    // top: 0px;
+    // left: 50%;
+    // transform: translate(-50%);
+    width: 100%;
+    height: 75px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
-    p {
-      font-family: Noto Sans KR;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 120%;
-    }
+    gap: 12px;
   }
-  .icon {
+  h3 {
+    font-family: Noto Sans KR;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 38.4px */
+    color: #f00;
+  }
+  p {
+    font-family: Noto Sans KR;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    color: #fff;
+  }
+  .info-icon {
+    // position: absolute;
+    // top: 150px;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // gap: 76px;
+    color: #fff;
+    width: 641px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 76px;
+    margin: 0 auto;
+    text-align: center;
   }
-  .las la-university {
-    content: "\f19c";
-    font-family: "Line Awesome Free";
-    font-weight: 900;
+  .info-icon a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
   }
+  .info-icon i::after {
+    content: "";
+    width: 11px;
+    height: 100px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  .info-icon i {
+    font-size: 64px;
+    display: flex;
+    flex-direction: column;
+  }
+  .info-icon i:hover {
+    color: #f00;
+  }
+  .info-icon span {
+    font-size: 18px;
+  }
+  // .las la-university {
+  //   content: "\f19c";
+  //   font-family: "Line Awesome Free";
+  //   font-weight: 900;
+  // }
+}
+
+.bnr {
+  margin-top: 120px;
+  width: 100%;
+  height: 900px;
+  background: url(../../images/main/img-rent-concert.png) 0 0 / cover no-repeat;
+  opacity: 80%;
 }
